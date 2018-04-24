@@ -5,28 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:scrollbarSize="@android:dimen/thumbnail_width"
-    tools:context="com.example.alexandra.mentorme.SignIn">
+    tools:context="com.example.alexandra.mentorme.LogIn">
 
     <LinearLayout
-        android:layout_width="344dp"
+        android:layout_width="368dp"
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="SIGN IN"
-            android:textAlignment="center"
+            android:text="LOG IN"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textAlignment="center"/>
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -34,58 +32,27 @@
             android:visibility="invisible" />
 
         <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="@color/white"
-            android:hint="Username..."
-            android:textColorHint="@color/white"
-            android:inputType="text"
-            android:visibility="visible" />
-
-        <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editTextEmailLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email address..."
-            android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editTextPasswordLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password..."
-            android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editTextConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Confirm password..."
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:inputType="textPassword" />
-
-        <EditText
-            android:id="@+id/editTextSubject"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Subject..."
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText17"
+            android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -93,11 +60,9 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="REGISTER" />
-
+            android:text="LOG IN" />
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

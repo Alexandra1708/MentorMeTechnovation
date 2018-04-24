@@ -15,15 +15,25 @@ public class Mentor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mentor);
-        Button buttonSignIn = (Button) findViewById(R.id.buttonMentor);
-        Button buttonLogIn = (Button) findViewById(R.id.buttonStudent);
 
+        buttonSignIn= (Button)findViewById(R.id.buttonSignIn);
+        buttonLogIn = (Button) findViewById(R.id.buttonLogIn);
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(Mentor.this, SignIn.class);
-                Mentor.this.startActivity(intent2);
+                Intent intentSignIn = new Intent(Mentor.this, SignIn.class);
+                Mentor.this.startActivity(intentSignIn);
             }
         });
+
+        buttonLogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLogIn = new Intent(Mentor.this, LogIn.class);
+                Mentor.this.startActivity(intentLogIn);
+            }
+        });
+
+
     }
 }

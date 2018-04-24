@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Choice" />
         <activity android:name=".Mentor" />
-        <activity android:name=".SignIn"></activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".LogIn"></activity>
     </application>
 
 </manifest>
