@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import android.database.sqlite.*;
 /**
  * Created by Alexandra on 4/25/2018.
  */
@@ -33,6 +32,7 @@ public class Database extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE_QUERY);}
@@ -42,7 +42,7 @@ public class Database extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
-    public void insertContact(Contact c)
+    public void addUser(User user)
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -52,40 +52,24 @@ public class Database extends SQLiteOpenHelper {
         int count = cursor.getCount();
 
         values.put(ID, count);
-        values.put(USERNAME, c.getUname());
-        values.put(PASSWORD, c.getPass());
-        values.put(CPASSWORD, c.getCpass());
-        values.put(EMAIL, c.getEmail());
-        values.put(SUBJECT, c.getSubject());
-        values.put(NAME, c.getName());
+        values.put(USERNAME, user.getUname());
+        values.put(PASSWORD, user.getPass());
+        values.put(CPASSWORD, user.getCpass());
+        values.put(EMAIL, user.getEmail());
+        values.put(SUBJECT, user.getSubject());
+        values.put(NAME, user.getName());
 
         sqLiteDatabase.insert(TABLE_NAME, null, values);
 
     }
-    public String searchPass (String uname)
-    {
-        sqLiteDatabase = this.getReadableDatabase();
-        String query= "select uname, pass from " + TABLE_NAME;
-        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
-        String a, b;
-        b="not found";
-        if(cursor. moveToFirst())
-        {
-            do{
-                a= cursor.getString(0);
 
-                if(a.equals(uname))
-                {
-                    b= cursor.getString(1);
-                    break;
-                }
-            }
-            while(cursor.moveToNext());
-        }
-        return b;
+
+
+
     }
 
-}
+
+
 
 
 

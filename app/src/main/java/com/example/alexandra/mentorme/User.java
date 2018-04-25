@@ -4,7 +4,7 @@ package com.example.alexandra.mentorme;
  * Created by Alexandra on 4/25/2018.
  */
 
-public class Contact {
+public class User {
     int id;
     String email, uname, pass, cpass, subject, name;
 
@@ -65,5 +65,6 @@ public class Contact {
     public String getUname() {
         return this.uname;
     }
+
 
 }

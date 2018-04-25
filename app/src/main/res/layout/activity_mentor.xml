@@ -15,12 +15,12 @@
         tools:layout_editor_absoluteY="8dp">
 
         <Button
-            android:id="@+id/buttonSignIn"
+            android:id="@+id/buttonSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="Sign In" />
+            android:text="Sign Up" />
 
         <Button
             android:id="@+id/buttonLogIn"

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class Mentor extends AppCompatActivity {
 
-    Button buttonSignIn;
+    Button buttonSignUp;
     Button buttonLogIn;
 
 
@@ -17,13 +17,13 @@ public class Mentor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mentor);
 
-        buttonSignIn= (Button)findViewById(R.id.buttonSignIn);
+        buttonSignUp= (Button)findViewById(R.id.buttonSignUp);
         buttonLogIn = (Button) findViewById(R.id.buttonLogIn);
-        buttonSignIn.setOnClickListener(new View.OnClickListener() {
+        buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentSignIn = new Intent(Mentor.this, SignIn.class);
-                Mentor.this.startActivity(intentSignIn);
+                Intent intentSignUp = new Intent(Mentor.this, SignUp.class);
+                Mentor.this.startActivity(intentSignUp);
             }
         });
 

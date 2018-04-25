@@ -2,17 +2,12 @@ package com.example.alexandra.mentorme;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
-import static com.example.alexandra.mentorme.R.id.view;
 
 public class LogIn extends AppCompatActivity {
 
@@ -29,28 +24,27 @@ public class LogIn extends AppCompatActivity {
         buttonLogIn = (Button) findViewById(R.id.buttonLogIn);
 
 
-    }
 
-
-
-
-    public void onButtonClick(View view) {
-        if (view.getId() == R.id.buttonLogIn) {
-            EditText a = (EditText) findViewById(R.id.editTextEmailLogIn);
-            String str = a.getText().toString();
-            EditText b = (EditText) findViewById(R.id.editTextPasswordLogIn);
-            String pass = b.getText().toString();
-
-            String password = db.searchPass(str);
-
-
-            buttonLogIn.setOnClickListener(new View.OnClickListener() {
+            /*buttonLogIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intentProfile = new Intent(LogIn.this, Profile.class);
-                    LogIn.this.startActivity(intentProfile);
+                    String email = editTextEmailLogIn.getText().toString();
+                    String password = editTextPasswordLogIn.getText().toString();
+                    if(db.checkUser( email, password)) {
+                        Intent intentProfile = new Intent(LogIn.this, Profile.class);
+                        LogIn.this.startActivity(intentProfile);
+                    }
+                    else {
+                        AlertDialog.Builder alert = new AlertDialog.Builder(LogIn.this);
+                        alert.setMessage("Your account does not exist!");
+                        alert.setPositiveButton("OK", null);
+                        alert.setCancelable(true);
+                        alert.create().show();
+                    }
                 }
-            });
+            });*/
         }
     }
-}
+
+
+
